@@ -67,14 +67,14 @@ The quick way to localise is to find and replace. It leaves "color" in the headl
 The skill is one folder: `skills/uk`, containing `SKILL.md`. Put that folder wherever your agent looks for skills.
 
 ```bash
-git clone https://github.com/JDebDesign/claude-code-uk-skill.git
+git clone https://github.com/JDebDesign/uk-skill.git
 ```
 
 **Claude Code**
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R claude-code-uk-skill/skills/uk ~/.claude/skills/uk
+cp -R uk-skill/skills/uk ~/.claude/skills/uk
 ```
 
 Start a new session so it picks the skill up. To use it in a single project only, copy the folder into that project's `.claude/skills/` instead.
