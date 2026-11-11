@@ -54,6 +54,10 @@ The quick way to localise is to find and replace. It leaves "color" in the headl
 
 `/uk` does the whole job and shows its working. It reports the exchange rate, the date and the source, and it marks converted prices as exchange-rate conversions rather than confirmed UK retail prices.
 
+## Where it came from
+
+I built `/uk` for the Figma agent first, to localise email and web-page designs on the canvas. This version adapts the same rules for vibe coding, so it also works on code in Claude Code, Codex and other agents. The original is on [Figma Community](https://www.figma.com/community/skill/163358/uk-localisation).
+
 ## How it handles prices
 
 - **UK prices you supply win.** If you have approved UK prices, it uses them.
