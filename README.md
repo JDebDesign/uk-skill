@@ -1,6 +1,8 @@
-# /uk: a Claude Code skill that makes a UK version of your email or web page
+# /uk: an agent skill that makes a UK version of your email or web page
 
 US copy, US prices and US delivery rules do not work on a UK audience. `/uk` takes the email or web-page design you have selected and makes a UK-localised copy of it. Your original stays untouched.
+
+It is a plain `SKILL.md` file, so it works with any agent that supports skills: Claude Code, the Figma agent, Codex and more.
 
 <p align="center">
   <img src="assets/uk-cover.png" alt="/uk, UK localisation, for emails and web pages" width="560">
@@ -8,7 +10,7 @@ US copy, US prices and US delivery rules do not work on a UK audience. `/uk` tak
 
 ## What you get
 
-Select an email or web-page design, run `/uk`, and Claude:
+Select an email or web-page design, run `/uk`, and your agent:
 
 - **Duplicates the design** next to the original and names the copy "UK email" or "UK web page"
 - **Adapts the wording** from US to natural UK English, keeping meaning and tone
@@ -47,23 +49,34 @@ The quick way to localise is to find and replace. It leaves "color" in the headl
 
 ## Install
 
-This is a personal skill, so install it once and it works in every project.
+The skill is one folder: `skills/uk`, containing `SKILL.md`. Put that folder wherever your agent looks for skills.
 
 ```bash
 git clone https://github.com/JDebDesign/claude-code-uk-skill.git
+```
+
+**Claude Code**
+
+```bash
 mkdir -p ~/.claude/skills
 cp -R claude-code-uk-skill/skills/uk ~/.claude/skills/uk
 ```
 
-Start a new Claude Code session so it picks the skill up.
+Start a new session so it picks the skill up. To use it in a single project only, copy the folder into that project's `.claude/skills/` instead.
 
-To use it in a single project only, copy the `skills/uk` folder into that project's `.claude/skills/` folder instead.
+**Figma agent**
+
+Install it from [Figma Community](https://www.figma.com/community/skill/163358/uk-localisation).
+
+**Codex and other agents**
+
+Copy `skills/uk` into your agent's skills folder. Check your agent's documentation for where that is. If it does not support skills, paste the contents of `skills/uk/SKILL.md` in as instructions.
 
 ## Use
 
-1. Connect Claude Code to your design tool, with the email or web page selected.
-2. Type `/uk`.
-3. Review the UK copy. Claude links to it and lists what still needs a human decision.
+1. Select the email or web-page design in a tool your agent can read and edit.
+2. Run `/uk`, or ask your agent to use the `uk` skill.
+3. Review the UK copy. Your agent links to it and lists what still needs a human decision.
 
 You can add details in the same message, for example your own exchange rate or approved UK prices.
 
@@ -74,10 +87,6 @@ You can add details in the same message, for example your own exchange rate or a
 - Dates, measurements, sizing, URLs and regional terms are reviewed, and dates use an unambiguous UK format where possible.
 - Longer UK copy is checked so it stays readable, with no clipping or overlap.
 - The skill is a short plain-text file. To change the free-delivery threshold or the wording rules, open `skills/uk/SKILL.md`.
-
-## Also on Figma Community
-
-Prefer to install it from Figma? It is published here: [UK Localisation on Figma Community](https://www.figma.com/community/skill/163358/uk-localisation).
 
 ## License
 
